@@ -6,9 +6,9 @@ function bestIntervalInDay(strArr) {
     let hoursInMinutes = parseInt(time.slice(0, 2)) * 60;
     const minutes = parseInt(time.slice(3, 5));
 
-    const isMiddleDay = hoursInMinutes / 60 !== 12;
+    const isNotMiddleDay = hoursInMinutes / 60 !== 12;
 
-    if (time.includes("PM") && isMiddleDay) {
+    if (time.includes("PM") && isNotMiddleDay) {
       hoursInMinutes += 12 * 60;
     }
 
